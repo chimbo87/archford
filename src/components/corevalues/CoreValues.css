@@ -1,0 +1,208 @@
+.core-values-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(to bottom, #FFFFFF 50%, #E8F1FA 50%);
+  }
+  
+  .core-values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-intro {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: flex-start;
+  }
+  
+  .section-intro h2 {
+    flex: 1;
+    color: #333F4D;
+    font-size: 2.5rem;
+    margin: 0;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .section-intro h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #36B37E;
+    margin-top: 1rem;
+  }
+  
+  .intro-content {
+    flex: 2;
+  }
+  
+  .intro-content > p {
+    color: #67758D;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  
+  .philosophy-highlight {
+    background-color: #1A6CBD;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  
+  .philosophy-highlight h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .philosophy-highlight p {
+    margin: 0;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .value-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(103, 117, 141, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .value-card h3 {
+    color: #333F4D;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .value-card p {
+    color: #67758D;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  
+  .care-approach {
+    background-color: #FFFFFF;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(103, 117, 141, 0.1);
+  }
+  
+  .care-approach h3 {
+    color: #333F4D;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .approach-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .approach-list li {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .approach-icon {
+    background-color: #36B37E;
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+  }
+  
+  .approach-text h4 {
+    color: #333F4D;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .approach-text p {
+    color: #67758D;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .approach-list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .core-values-section {
+      padding: 4rem 1.5rem;
+      background: linear-gradient(to bottom, #FFFFFF 30%, #E8F1FA 30%);
+    }
+    
+    .section-intro {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .section-intro h2 {
+      font-size: 2rem;
+    }
+    
+    .care-approach {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .core-values-section {
+      padding: 3rem 1rem;
+    }
+    
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-intro h2 {
+      font-size: 1.8rem;
+    }
+    
+    .philosophy-highlight {
+      padding: 1.5rem;
+    }
+  }

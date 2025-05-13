@@ -1,0 +1,383 @@
+/* 
+  Footer Component Styles
+  Color codes used:
+  - Primary Blue: #1A6CBD
+  - Secondary Blue: #E8F1FA
+  - Accent Color: #36B37E
+  - Neutral: #F7F9FC
+  - Text Dark: #333F4D
+  - Text Light: #67758D
+  - White: #FFFFFF
+  - Alert/CTA: #FF6B6B
+*/
+
+.site-footer {
+  position: relative;
+  margin-top: 3rem;
+}
+
+/* Footer Top Section */
+.footer-top {
+  background-color: #1A6CBD;
+  color: #FFFFFF;
+  padding: 4rem 0 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* About Section */
+.footer-about {
+  grid-column: span 1;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+  max-width: 180px;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  text-align: start;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #36B37E;
+  transform: translateY(-3px);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* Links Section */
+.footer-links, 
+.footer-services {
+  grid-column: span 1;
+}
+
+.footer-links h3,
+.footer-services h3,
+.footer-newsletter h3 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-links h3::after,
+.footer-services h3::after,
+.footer-newsletter h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #36B37E;
+}
+
+.footer-links ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-services li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a,
+.footer-services a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-links a:hover,
+.footer-services a:hover {
+  color: #FFFFFF;
+  transform: translateX(5px);
+}
+
+.footer-links a::before,
+.footer-services a::before {
+  content: '›';
+  margin-right: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  left: -10px;
+}
+
+.footer-links a:hover::before,
+.footer-services a:hover::before {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  grid-column: span 1;
+}
+
+.footer-newsletter p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  position: relative;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 3rem;
+  border: none;
+  background-color: #36B37E;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #2d9669;
+}
+
+.newsletter-form button svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.success-message {
+  color: #36B37E;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.footer-contact {
+  margin-top: 1.5rem;
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact strong {
+  color: #FFFFFF;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #0f4a8c;
+  padding: 1.5rem 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #FFFFFF;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #36B37E;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background-color: #2d9669;
+  transform: translateY(-3px);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-about {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-services,
+  .footer-newsletter {
+    grid-column: span 1;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-links h3,
+  .footer-services h3,
+  .footer-newsletter h3 {
+    text-align: center;
+  }
+  
+  .footer-links h3::after,
+  .footer-services h3::after,
+  .footer-newsletter h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+  }
+  
+  .footer-links ul,
+  .footer-services ul {
+    text-align: center;
+  }
+  
+  .footer-newsletter p {
+    text-align: center;
+  }
+  
+  .footer-contact {
+    text-align: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .copyright {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-legal {
+    justify-content: center;
+  }
+  
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

@@ -1,0 +1,127 @@
+/* PhysicalAddress.css */
+.address-container {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .address-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .address-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .address-icon {
+    color: #FF6B6B;
+    min-width: 24px;
+    height: 24px;
+    margin-top: 4px;
+  }
+  
+  .address-info h2 {
+    color: #1A6CBD;
+    margin: 0 0 16px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .address-line {
+    color: #333F4D;
+    margin: 0 0 4px 0;
+    font-size: 16px;
+  }
+  
+  .address-directions {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .directions-icon {
+    color: #36B37E;
+    min-width: 24px;
+    height: 24px;
+    margin-top: 4px;
+  }
+  
+  .address-directions h3 {
+    color: #333F4D;
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .directions-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .directions-content h4 {
+    color: #1A6CBD;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .directions-content ol,
+  .directions-content ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #67758D;
+  }
+  
+  .directions-content li {
+    margin-bottom: 8px;
+  }
+  
+  .address-action {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .directions-button {
+    background-color: #36B37E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  
+  .directions-button:hover {
+    background-color: #2E9D6A;
+  }
+  
+  @media (min-width: 768px) {
+    .address-content {
+      grid-template-columns: 1fr 2fr;
+    }
+    
+    .directions-tabs {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .directions-content {
+      flex: 1;
+      min-width: 250px;
+    }
+  }

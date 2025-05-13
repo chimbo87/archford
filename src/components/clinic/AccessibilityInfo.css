@@ -1,0 +1,80 @@
+/* Accessibility Information CSS */
+.accessibility-section {
+    padding: 3rem 1.5rem;
+    background-color: white;
+  }
+  
+  .accessibility-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .accessibility-text h2 {
+    color: #1A6CBD;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .accessibility-text p {
+    color: #67758D;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .accessibility-features {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .feature {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .feature-icon {
+    font-size: 1.8rem;
+    color: #36B37E;
+    flex-shrink: 0;
+  }
+  
+  .feature-text h4 {
+    color: #333F4D;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-text p {
+    color: #67758D;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .accessibility-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accessibility-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .accessibility-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .accessibility-image {
+      order: -1;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }

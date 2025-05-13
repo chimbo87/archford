@@ -1,0 +1,104 @@
+/* DepartmentList.css */
+.departments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .departments-title {
+    color: #333F4D;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .departments-subtitle {
+    color: #67758D;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .department-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .department-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .department-icon {
+    background-color: #E8F1FA;
+    color: #1A6CBD;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .department-icon i {
+    font-size: 28px;
+  }
+  
+  .department-name {
+    color: #333F4D;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .department-description {
+    color: #67758D;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .department-link {
+    display: inline-block;
+    color: #1A6CBD;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .department-link:hover {
+    color: #36B37E;
+  }
+  
+  .department-link:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .department-link:hover:after {
+    transform: scaleX(1);
+  }
+  
+  @media (max-width: 768px) {
+    .departments-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }

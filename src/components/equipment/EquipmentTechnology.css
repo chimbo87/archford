@@ -1,0 +1,142 @@
+.equipment-section {
+    padding: 4rem 2rem;
+    background-color: #F7F9FC;
+  }
+  
+  .equipment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    color: #1A6CBD;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header p {
+    color: #67758D;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .category-btn {
+    background-color: #E8F1FA;
+    color: #333F4D;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .category-btn:hover {
+    background-color: #1A6CBD;
+    color: white;
+  }
+  
+  .category-btn.active {
+    background-color: #1A6CBD;
+    color: white;
+    box-shadow: 0 4px 12px rgba(26, 108, 189, 0.2);
+  }
+  
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .equipment-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(103, 117, 141, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(103, 117, 141, 0.15);
+  }
+  
+  .equipment-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: #E8F1FA;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .equipment-card h3 {
+    color: #333F4D;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .equipment-card p {
+    color: #67758D;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .equipment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+    
+    .category-filter {
+      gap: 0.75rem;
+    }
+    
+    .category-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .equipment-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .equipment-section {
+      padding: 3rem 1rem;
+    }
+    
+    .section-header {
+      margin-bottom: 2rem;
+    }
+    
+    .equipment-card {
+      padding: 1.5rem;
+    }
+  }

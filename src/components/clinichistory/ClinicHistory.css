@@ -1,0 +1,226 @@
+.history-section {
+    padding: 6rem 2rem;
+    background-color: #FFFFFF;
+  }
+  
+  .history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .history-content {
+    flex: 1;
+  }
+  
+  .section-header {
+    margin-bottom: 3rem;
+  }
+  
+  .section-label {
+    display: inline-block;
+    background-color: #E8F1FA;
+    color: #1A6CBD;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header h2 {
+    color: #333F4D;
+    font-size: 2.5rem;
+    margin: 0;
+    position: relative;
+  }
+  
+  .section-header h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #36B37E;
+    margin-top: 1rem;
+  }
+  
+  .history-timeline {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  .history-timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #E8F1FA;
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .timeline-year {
+    min-width: 80px;
+    background-color: #1A6CBD;
+    color: white;
+    border-radius: 30px;
+    padding: 0.25rem 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    margin-right: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    flex: 1;
+  }
+  
+  .timeline-content h3 {
+    color: #333F4D;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .timeline-content p {
+    color: #67758D;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .founding-quote {
+    background-color: #F7F9FC;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .quote-icon {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 4rem;
+    color: #1A6CBD;
+    opacity: 0.2;
+    font-family: Georgia, serif;
+  }
+  
+  blockquote {
+    margin: 0;
+    padding: 0;
+    color: #333F4D;
+    font-style: italic;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .quote-author {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .author-name {
+    font-weight: 600;
+    color: #333F4D;
+  }
+  
+  .author-title {
+    color: #67758D;
+    font-size: 0.9rem;
+  }
+  
+  .history-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: #E8F1FA;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .image-placeholder img{
+    width: 100%;
+    height: inherit;
+    object-fit: contain;
+  }
+  .image-accent {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: #36B37E;
+    border-radius: 10px;
+    right: -20px;
+    bottom: -20px;
+    z-index: 0;
+    opacity: 0.15;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .history-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .history-section {
+      padding: 4rem 1.5rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+    
+    .timeline-year {
+      min-width: 70px;
+      font-size: 0.85rem;
+    }
+    
+    .timeline-content h3 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .history-section {
+      padding: 3rem 1rem;
+    }
+    
+    .history-timeline::before {
+      left: 35px;
+    }
+    
+    .timeline-year {
+      min-width: 70px;
+      font-size: 0.8rem;
+    }
+    
+    .blockquote {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,124 @@
+.testimonials {
+    padding: 4rem 0;
+    background-color: #E8F1FA;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .testimonials-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .testimonials h2 {
+    color: #1A6CBD;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .testimonials-carousel {
+    position: relative;
+    height: 250px;
+  }
+  
+  .testimonial-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    visibility: hidden;
+  }
+  
+  .testimonial-card.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .quote-icon {
+    color: #36B37E;
+    font-size: 4rem;
+    line-height: 1;
+    font-family: 'Georgia', serif;
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    opacity: 0.3;
+  }
+  
+  .testimonial-quote {
+    color: #333F4D;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #E8F1FA;
+  }
+  
+  .testimonial-author h4 {
+    color: #1A6CBD;
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .testimonial-rating {
+    display: flex;
+  }
+  
+  .star {
+    color: #FFD700;
+    margin-right: 2px;
+  }
+  
+  .testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #C4D7ED;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #1A6CBD;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials-carousel {
+      height: 300px;
+    }
+    
+    .testimonial-quote {
+      font-size: 1rem;
+    }
+  }

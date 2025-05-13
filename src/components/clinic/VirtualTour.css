@@ -1,0 +1,65 @@
+/* Virtual Tour CSS */
+.virtual-tour {
+    padding: 3rem 1.5rem;
+    background-color: #F7F9FC;
+    text-align: center;
+  }
+  
+  .virtual-tour h2 {
+    color: #1A6CBD;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .virtual-tour .subtitle {
+    color: #67758D;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+  
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .tour-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .tour-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tour-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .photo-caption {
+    padding: 1rem;
+    color: #333F4D;
+    font-weight: 500;
+  }
+  
+  .cta-button {
+    background-color: #36B37E;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #2d9a6b;
+  }

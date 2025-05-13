@@ -1,0 +1,81 @@
+/* Parking and Transportation CSS */
+.parking-section {
+    padding: 3rem 1.5rem;
+    background-color: #F7F9FC;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .parking-section h2 {
+    color: #1A6CBD;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .parking-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .option {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .option-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1A6CBD;
+  }
+  
+  .option h3 {
+    color: #333F4D;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .option li {
+    color: #67758D;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .option li::before {
+    content: "•";
+    color: #36B37E;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+  }
+  
+  .parking-tip {
+    background-color: #E8F1FA;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .parking-tip p {
+    color: #333F4D;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .parking-tip strong {
+    color: #1A6CBD;
+  }

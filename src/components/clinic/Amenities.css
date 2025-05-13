@@ -1,0 +1,62 @@
+/* Amenities CSS */
+.amenities-section {
+    /* padding: 3rem 1.5rem; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .amenities-section h2 {
+    color: #1A6CBD;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .amenities-subtitle {
+    color: #67758D;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .amenity {
+    background-color: #F7F9FC;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .amenity:hover {
+    background-color: #E8F1FA;
+    transform: translateY(-3px);
+  }
+  
+  .amenity-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #36B37E;
+  }
+  
+  .amenity h3 {
+    color: #333F4D;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .amenity p {
+    color: #67758D;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }

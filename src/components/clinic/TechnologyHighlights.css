@@ -1,0 +1,69 @@
+/* Technology Highlights CSS */
+.technology-section {
+  /* padding: 3rem 1.5rem; */
+  background-color: #e8f1fa;
+  padding: 20px;
+  width: 100%;
+}
+
+.tech-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  /* margin: 0 auto 3rem; */
+}
+
+.tech-header h2 {
+  color: #1a6cbd;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tech-header p {
+  color: #67758d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.tech-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a6cbd;
+}
+
+.tech-card h3 {
+  color: #333f4d;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.tech-card p {
+  color: #67758d;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
