@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Contact() {
+function Projects() {
   return (
     <div>
-      <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
+        <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
         ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
         deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
         consequuntur repudiandae non?
@@ -23,4 +23,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Projects

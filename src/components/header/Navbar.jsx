@@ -1,116 +1,70 @@
-import React, { useState, useEffect } from "react";
-import "./Navbar.css";
-import { MdEmail } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
-import { IoLocation } from "react-icons/io5";
-import { FaSquarePhone } from "react-icons/fa6";
-import logo from "../../assets/images/mitralog.png";
-import { Link, useLocation } from "react-router-dom"; // Added useLocation hook
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  const [isMenuActive, setIsMenuActive] = useState(false);
-  const [animatedLinks, setAnimatedLinks] = useState(false);
-  const location = useLocation(); // Get current location
+  
+  // Handle scroll effect for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  const navigationItems = [
-    { path: "/", name: "home" },
-    { path: "/services", name: "services" },
-    { path: "/about", name: "about" },
-
-    { path: "/contact", name: "contact" },
-  ];
-
+  // Toggle mobile menu
   const toggleMenu = () => {
-    setIsMenuActive(!isMenuActive);
-    setAnimatedLinks(!animatedLinks);
+    setIsOpen(!isOpen);
+  };
+  
+  // Close mobile menu when navigation occurs
+  const handleNavigate = (path) => {
+    navigate(path);
+    setIsOpen(false);
   };
 
-  useEffect(() => {
-    if (!isMenuActive) {
-      setAnimatedLinks(false);
-    }
-  }, [isMenuActive]);
-
   return (
-    <div id="navigation-bar">
-      <div id="nav-top">
-        <div id="nav-top-card">
-          <small>
-            <MdEmail /> info@mitralclinic.org
-          </small>
+    <nav className={`portfolio-navbar ${scrolled ? 'portfolio-navbar-scrolled' : ''}`}>
+      <div className="portfolio-navbar-container">
+        <div className="portfolio-navbar-logo">
+          <button onClick={() => handleNavigate('/')} className="portfolio-logo-button">DevPortfolio</button>
         </div>
-        <div id="nav-top-card">
-          <small id="top-nav-add">
-            <IoLocation />
-            1741 Lobengula Street, Ruwa
-          </small>
-        </div>
-        <div id="nav-top-card">
-          <small id="top-nav-addt">
-            <FaSquarePhone /> +26377 484 3841
-          </small>
-        </div>
-    
-      </div>
-      <nav className="navbar">
-        <div
-          className="mitral-logo"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          <img src={logo} alt="logo" />
-          <small>MITRAL <span>CLINIC</span></small>
-        </div>
-
-        <ul className={`nav-links ${isMenuActive ? "active" : ""}`}>
-          {navigationItems.map((item, index) => (
-            <li
-              key={item.name}
-              style={
-                animatedLinks
-                  ? {
-                      animation: `navLinkFade 0.5s ease forwards ${
-                        index / 7 + 0.3
-                      }s`,
-                    }
-                  : {}
-              }
-            >
-              <Link
-                to={item.path}
-                className={location.pathname === item.path ? "active" : ""}
-                onClick={() => {
-                  setIsMenuActive(false);
-                  setAnimatedLinks(false);
-                }}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <button
-          className="chat-btn"
-          onClick={() => {
-            navigate("/contact");
-          }}
-        >
-          Book Appointment
-        </button>
-
-        <button
-          className={`hamburger ${isMenuActive ? "active" : ""}`}
+        
+        {/* Mobile menu button */}
+        <button 
+          className="portfolio-navbar-toggle" 
           onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className={`portfolio-navbar-icon ${isOpen ? 'open' : ''}`}></span>
         </button>
-      </nav>
-    </div>
+        
+        {/* Navigation Links */}
+        <div className={`portfolio-navbar-links ${isOpen ? 'active' : ''}`}>
+          <ul>
+            <li><button onClick={() => handleNavigate('/')} className="portfolio-nav-link">Home</button></li>
+            <li><button onClick={() => handleNavigate('/about')} className="portfolio-nav-link">About</button></li>
+            <li><button onClick={() => handleNavigate('/projects')} className="portfolio-nav-link">Projects</button></li>
+            <li><button onClick={() => handleNavigate('/blogs')} className="portfolio-nav-link">Blog</button></li>
+          </ul>
+          <div className="portfolio-navbar-cta">
+            <button onClick={() => handleNavigate('/contact')} className="portfolio-navbar-button">Let's Connect</button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 

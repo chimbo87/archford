@@ -1,0 +1,93 @@
+/* ProfessionalSummary.css */
+.summary-section {
+    padding: 5rem 5%;
+    background-color: #121212;
+    color: white;
+  }
+  
+  .summary-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .summary-content {
+    flex: 1;
+  }
+  
+  .summary-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #d4af37;
+  }
+  
+  .summary-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .summary-button {
+    background-color: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .summary-button:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .summary-decoration {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .summary-gold-box {
+    width: 300px;
+    height: 300px;
+    background-color: #d4af37;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 1;
+    border-radius: 20px;
+    transform: rotate(15deg);
+  }
+  
+  .summary-pattern {
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient(
+      circle,
+      #d4af37 2px,
+      transparent 2px
+    );
+    background-size: 20px 20px;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0.1);
+  }
+  
+  @media (max-width: 992px) {
+    .summary-container {
+      flex-direction: column;
+    }
+    .summary-decoration {
+      display: none;
+    }
+  }

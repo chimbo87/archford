@@ -1,20 +1,18 @@
 import React from "react";
-import Hero from "../../components/hero/Hero";
-import Offer from "../../components/offer/Offer";
-import Mission from "../../components/mission/Mission";
-import Shop from "../../components/shop/Shop";
-import PatientTestimonials from "../../components/testimonies/PatientTestimonials";
-import ClinicHours from "../../components/emergencey/ClinicHours";
+import Hero from "../../components/home/hero/Hero";
+import TechStack from "../../components/home/techstack/TechStack";
+import ProjectsCarousel from "../../components/home/projectscarousel/ProjectsCarousel";
+import ProfessionalSummary from "../../components/home/professionalsummary/ProfessionalSummary";
+import ContactInfo from "../../components/home/contactinfo/ContactInfo";
 
 function Home() {
   return (
     <>
       <Hero />
-      <Offer />
-      <Mission />
-      <Shop />
-      <PatientTestimonials/>
-      <ClinicHours/>
+      <TechStack/>
+      <ProjectsCarousel/>
+      <ProfessionalSummary/>
+      <ContactInfo/>
     </>
   );
 }
