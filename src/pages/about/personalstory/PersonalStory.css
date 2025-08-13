@@ -1,0 +1,206 @@
+/* Main Container */
+.ps-container {
+    background-color: #0f172a; /* slate-900 */
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ps-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    z-index: 0;
+  }
+  
+  .ps-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Header Section */
+  .ps-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .ps-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .ps-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    border-radius: 2px;
+  }
+  
+  .ps-subtitle {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Timeline Styles */
+  .ps-timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .ps-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #10b981);
+    border-radius: 2px;
+  }
+  
+  .ps-timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .ps-timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 3rem;
+    text-align: right;
+  }
+  
+  .ps-timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 3rem;
+  }
+  
+  .ps-timeline-card {
+    background-color: #1e293b; /* slate-800 */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ps-timeline-item:hover .ps-timeline-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ps-timeline-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  }
+  
+  .ps-timeline-item:nth-child(odd) .ps-timeline-icon {
+    right: -75px;
+  }
+  
+  .ps-timeline-item:nth-child(even) .ps-timeline-icon {
+    left: -75px;
+  }
+  
+  .ps-timeline-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #f8fafc; /* slate-50 */
+  }
+  
+  .ps-timeline-year {
+    color: #3b82f6; /* blue-500 */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ps-timeline-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .ps-timeline-desc {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .ps-timeline::before {
+      left: 40px;
+    }
+  
+    .ps-timeline-item {
+      width: 100%;
+      padding-left: 5rem;
+      padding-right: 0;
+      text-align: left;
+    }
+  
+    .ps-timeline-item:nth-child(even) {
+      left: 0;
+    }
+  
+    .ps-timeline-item:nth-child(odd) .ps-timeline-icon,
+    .ps-timeline-item:nth-child(even) .ps-timeline-icon {
+      left: -15px;
+      right: auto;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .ps-container {
+      padding: 3rem 1rem;
+    }
+  
+    .ps-title {
+      font-size: 2rem;
+    }
+  
+    .ps-subtitle {
+      font-size: 1rem;
+    }
+  
+    .ps-timeline-card {
+      padding: 1.5rem;
+    }
+  
+    .ps-timeline-title {
+      font-size: 1.2rem;
+    }
+  
+    .ps-timeline-desc {
+      font-size: 0.95rem;
+    }
+  }

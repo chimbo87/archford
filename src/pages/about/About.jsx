@@ -1,28 +1,21 @@
-import React from "react";
+import React from 'react'
+import PersonalStory from './personalstory/PersonalStory'
+import SkillsMatrix from './skillsmatrix/SkillsMatrix'
+import ExperienceTimeline from './experiencetimeline/ExperienceTimeline'
+import PersonalInterests from './personalinterests/PersonalInterests'
+import ProfileImage from './profileimage/ProfileImage'
 
 function About() {
   return (
     <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-      </p>
+         <ProfileImage/>
+      <PersonalStory/>
+      <SkillsMatrix/>
+      <ExperienceTimeline/>
+      <PersonalInterests/>
+   
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

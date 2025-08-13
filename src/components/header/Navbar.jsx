@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './Navbar.css';
+import React, { useState, useEffect } from "react";
+import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const navigate = useNavigate();
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Toggle mobile menu
@@ -26,28 +27,50 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
           <a href="#home" onClick={handleLinkClick}>
-            <span className="logo-text">DevPortfolio</span>
+            <span className="logo-text" onClick={() => navigate("/")}>
+              DevPortfolio
+            </span>
           </a>
         </div>
 
         {/* Desktop Menu */}
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <a href="#home" className="navbar-link">Home</a>
+            <a
+              href="#home"
+              className="navbar-link"
+              onClick={() => navigate("/")}
+            >
+              Home
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#about" className="navbar-link">About</a>
+            <a
+              href="#about"
+              className="navbar-link"
+              onClick={() => navigate("/about")}
+            >
+              About
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#projects" className="navbar-link">Projects</a>
+            <a
+              href="#projects"
+              className="navbar-link"
+              onClick={() => navigate("/projects")}
+            >
+              Projects
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">Contact</a>
+            <a href="#contact" className="navbar-link">
+              Contact
+            </a>
           </li>
         </ul>
 
@@ -59,8 +82,8 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Hamburger */}
-        <div 
-          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+        <div
+          className={`hamburger ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
         >
           <span></span>
@@ -70,19 +93,39 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+      <div className={`mobile-menu ${isMenuOpen ? "active" : ""}`}>
         <ul className="mobile-menu-items">
           <li>
-            <a href="#home" onClick={handleLinkClick}>Home</a>
+            <a
+              href="#home"
+              onClick={(e) => {
+                handleLinkClick(e); 
+                navigate("/"); 
+              }}
+            >
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about" onClick={handleLinkClick}>About</a>
+            <a href="#about"  onClick={(e) => {
+                handleLinkClick(e); 
+                navigate("/about"); 
+              }}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#projects" onClick={handleLinkClick}>Projects</a>
+            <a href="#projects" onClick={(e) => {
+                handleLinkClick(e); 
+                navigate("/projects"); 
+              }}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#contact" onClick={handleLinkClick}>Contact</a>
+            <a href="#contact" onClick={handleLinkClick}>
+              Contact
+            </a>
           </li>
         </ul>
         <div className="mobile-cta">
@@ -94,7 +137,10 @@ const Navbar = () => {
 
       {/* Mobile Menu Backdrop */}
       {isMenuOpen && (
-        <div className="mobile-backdrop" onClick={() => setIsMenuOpen(false)}></div>
+        <div
+          className="mobile-backdrop"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
       )}
     </nav>
   );

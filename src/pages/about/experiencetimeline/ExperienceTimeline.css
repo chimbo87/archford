@@ -1,0 +1,215 @@
+/* Main Container */
+.et-container {
+    background-color: #0f172a; /* slate-900 */
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .et-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+    z-index: 0;
+  }
+  
+  .et-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Header Section */
+  .et-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .et-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .et-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    border-radius: 2px;
+  }
+  
+  .et-subtitle {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Timeline Styles */
+  .et-timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .et-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #10b981);
+    border-radius: 2px;
+  }
+  
+  .et-item {
+    position: relative;
+    padding-left: 90px;
+    margin-bottom: 3rem;
+  }
+  
+  .et-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .et-item-icon {
+    position: absolute;
+    left: 38px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .et-item-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #f8fafc; /* slate-50 */
+  }
+  
+  .et-work .et-item-icon {
+    background-color: #3b82f6; /* blue-500 */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+  }
+  
+  .et-education .et-item-icon {
+    background-color: #10b981; /* emerald-500 */
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+  }
+  
+  .et-certification .et-item-icon {
+    background-color: #f59e0b; /* amber-500 */
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+  }
+  
+  .et-item-content {
+    background-color: #1e293b; /* slate-800 */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .et-item:hover .et-item-content {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .et-item-period {
+    color: #3b82f6; /* blue-500 */
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .et-item-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .et-item-subtitle {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .et-item-description {
+    color: #94a3b8; /* slate-400 */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .et-container {
+      padding: 3rem 1rem;
+    }
+  
+    .et-title {
+      font-size: 2rem;
+    }
+  
+    .et-subtitle {
+      font-size: 1rem;
+    }
+  
+    .et-timeline::before {
+      left: 30px;
+    }
+  
+    .et-item {
+      padding-left: 70px;
+    }
+  
+    .et-item-icon {
+      left: 28px;
+    }
+  
+    .et-item-content {
+      padding: 1.5rem;
+    }
+  
+    .et-item-title {
+      font-size: 1.2rem;
+    }
+  
+    .et-item-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .et-title {
+      font-size: 1.8rem;
+    }
+  
+    .et-item-period {
+      font-size: 0.8rem;
+    }
+  
+    .et-item-description {
+      font-size: 0.95rem;
+    }
+  }

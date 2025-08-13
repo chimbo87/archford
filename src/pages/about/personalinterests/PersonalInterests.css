@@ -1,0 +1,196 @@
+/* Main Container */
+.pi-container {
+    background-color: #1e293b; /* slate-800 */
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pi-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    z-index: 0;
+  }
+  
+  .pi-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Header Section */
+  .pi-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .pi-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .pi-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    border-radius: 2px;
+  }
+  
+  .pi-subtitle {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Interests Grid */
+  .pi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .pi-card {
+    background-color: #0f172a; /* slate-900 */
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid var(--card-accent);
+  }
+  
+  .pi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  .pi-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .pi-card-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .pi-card-description {
+    color: #94a3b8; /* slate-400 */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Motivation Section */
+  .pi-motivation {
+    background-color: #0f172a; /* slate-900 */
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 4px solid #3b82f6; /* blue-500 */
+  }
+  
+  .pi-motivation-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .pi-motivation-text {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pi-container {
+      padding: 3rem 1rem;
+    }
+  
+    .pi-title {
+      font-size: 2rem;
+    }
+  
+    .pi-subtitle {
+      font-size: 1rem;
+    }
+  
+    .pi-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .pi-card {
+      padding: 1.5rem;
+    }
+  
+    .pi-motivation {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pi-title {
+      font-size: 1.8rem;
+    }
+  
+    .pi-card-title {
+      font-size: 1.2rem;
+    }
+  
+    .pi-card-description {
+      font-size: 0.95rem;
+    }
+  
+    .pi-motivation-title {
+      font-size: 1.3rem;
+    }
+  
+    .pi-motivation-text {
+      font-size: 1rem;
+    }
+  }

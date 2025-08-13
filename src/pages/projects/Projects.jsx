@@ -1,24 +1,12 @@
 import React from 'react'
+import ProjectsGrid from './projectsgrid/ProjectsGrid'
+import ProjectFilters from './projectfilters/ProjectFilters'
 
 function Projects() {
   return (
     <div>
-        <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati
-        ipsa cupiditate velit nulla neque? Aliquam numquam accusantium, eos,
-        deleniti impedit molestiae temporibus distinctio aspernatur nobis labore
-        consequuntur repudiandae non?</p>
+      <ProjectsGrid/>
+      {/* <ProjectFilters/> */}
     </div>
   )
 }

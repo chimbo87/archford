@@ -1,0 +1,223 @@
+/* Main Container */
+.sm-container {
+    background-color: #1e293b; /* slate-800 */
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sm-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    z-index: 0;
+  }
+  
+  .sm-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Header Section */
+  .sm-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .sm-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sm-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    border-radius: 2px;
+  }
+  
+  .sm-subtitle {
+    color: #cbd5e1; /* slate-300 */
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Skills Matrix Layout */
+  .sm-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .sm-category {
+    background-color: #0f172a; /* slate-900 */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .sm-category:hover {
+    transform: translateY(-5px);
+  }
+  
+  .sm-category-title {
+    color: #f8fafc; /* slate-50 */
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .sm-category-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #3b82f6, #10b981);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .sm-category-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #f8fafc; /* slate-50 */
+  }
+  
+  /* Skills List */
+  .sm-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .sm-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .sm-skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sm-skill-name {
+    color: #cbd5e1; /* slate-300 */
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .sm-skill-level {
+    color: #3b82f6; /* blue-500 */
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  /* Progress Bar */
+  .sm-progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #334155; /* slate-700 */
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .sm-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #3b82f6, #10b981);
+    position: relative;
+    transition: width 1s ease-out;
+  }
+  
+  .sm-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+    border-radius: 4px;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sm-container {
+      padding: 3rem 1rem;
+    }
+  
+    .sm-title {
+      font-size: 2rem;
+    }
+  
+    .sm-subtitle {
+      font-size: 1rem;
+    }
+  
+    .sm-matrix {
+      grid-template-columns: 1fr;
+    }
+  
+    .sm-category {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sm-title {
+      font-size: 1.8rem;
+    }
+  
+    .sm-category-title {
+      font-size: 1.3rem;
+    }
+  
+    .sm-category-icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .sm-category-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
