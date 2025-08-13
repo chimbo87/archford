@@ -1,22 +1,20 @@
 import React from "react";
 import Hero from "../../components/home/hero/Hero";
-import TechStack from "../../components/home/techstack/TechStack";
-import ProjectsCarousel from "../../components/home/projectscarousel/ProjectsCarousel";
-import ProfessionalSummary from "../../components/home/professionalsummary/ProfessionalSummary";
+import FeaturedProjects from "../../components/home/featuredprojects/FeaturedProjects";
 import ContactInfo from "../../components/home/contactinfo/ContactInfo";
-import Testimonials from "../../components/home/testimonials/Testimonials";
+import ContactPreview from "../../components/home/contactpreview/ContactPreview";
 import BlogTeaser from "../../components/home/blogteaser/BlogTeaser";
+import AboutPreview from "../../components/home/aboutpreview/AboutPreview";
+import SkillsTechnologies from "../../components/home/skillstechnologies/SkillsTechnologies";
 
 function Home() {
   return (
     <>
       <Hero />
-      <TechStack />
-      <ProjectsCarousel />
-      <ProfessionalSummary />
-      <Testimonials />
-      <BlogTeaser />
-      <ContactInfo />
+      <AboutPreview/>
+      <FeaturedProjects/>
+      <SkillsTechnologies/>
+      <ContactPreview/>
     </>
   );
 }

@@ -1,0 +1,215 @@
+/* Featured Projects Component - Scoped Styles */
+.featured-projects {
+  background-color: #0f172a;
+  padding: 6rem 0;
+  position: relative;
+}
+
+.featured-projects__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-projects__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.featured-projects__subtitle {
+  color: #3b82f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.featured-projects__title {
+  color: #f8fafc;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.featured-projects__divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 2px;
+}
+
+.featured-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.featured-projects__card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featured-projects__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-projects__image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.featured-projects__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featured-projects__card:hover .featured-projects__image {
+  transform: scale(1.05);
+}
+
+.featured-projects__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent 50%);
+}
+
+.featured-projects__content {
+  padding: 1.5rem;
+}
+
+.featured-projects__project-title {
+  color: #f8fafc;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.featured-projects__project-description {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.featured-projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-projects__tag {
+  background: rgba(30, 41, 59, 0.8);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featured-projects__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.featured-projects__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.featured-projects__link--live {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.featured-projects__link--live:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.featured-projects__link--github {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featured-projects__link--github:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .featured-projects__grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-projects {
+    padding: 4rem 0;
+  }
+
+  .featured-projects__header {
+    margin-bottom: 3rem;
+  }
+
+  .featured-projects__image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-projects {
+    padding: 3rem 0;
+  }
+
+  .featured-projects__container {
+    padding: 0 1.5rem;
+  }
+
+  .featured-projects__header {
+    margin-bottom: 2rem;
+  }
+
+  .featured-projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-projects__links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .featured-projects__link {
+    justify-content: center;
+  }
+}

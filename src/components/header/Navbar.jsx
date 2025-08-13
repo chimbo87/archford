@@ -1,71 +1,103 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate();
-  
-  // Handle scroll effect for navbar
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Toggle mobile menu
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
-  
-  // Close mobile menu when navigation occurs
-  const handleNavigate = (path) => {
-    navigate(path);
-    setIsOpen(false);
+
+  // Close mobile menu when clicking on a link
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <nav className={`portfolio-navbar ${scrolled ? 'portfolio-navbar-scrolled' : ''}`}>
-      <div className="portfolio-navbar-container">
-        <div className="portfolio-navbar-logo">
-          <button onClick={() => handleNavigate('/')} className="portfolio-logo-button">DevPortfolio</button>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-logo">
+          <a href="#home" onClick={handleLinkClick}>
+            <span className="logo-text">DevPortfolio</span>
+          </a>
         </div>
-        
-        {/* Mobile menu button */}
-        <button 
-          className="portfolio-navbar-toggle" 
+
+        {/* Desktop Menu */}
+        <ul className="navbar-menu">
+          <li className="navbar-item">
+            <a href="#home" className="navbar-link">Home</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#about" className="navbar-link">About</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#projects" className="navbar-link">Projects</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#contact" className="navbar-link">Contact</a>
+          </li>
+        </ul>
+
+        {/* CTA Button */}
+        <div className="navbar-cta">
+          <a href="#contact" className="cta-button">
+            Let's Talk
+          </a>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <div 
+          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
         >
-          <span className={`portfolio-navbar-icon ${isOpen ? 'open' : ''}`}></span>
-        </button>
-        
-        {/* Navigation Links */}
-        <div className={`portfolio-navbar-links ${isOpen ? 'active' : ''}`}>
-          <ul>
-            <li><button onClick={() => handleNavigate('/')} className="portfolio-nav-link">Home</button></li>
-            <li><button onClick={() => handleNavigate('/about')} className="portfolio-nav-link">About</button></li>
-            <li><button onClick={() => handleNavigate('/projects')} className="portfolio-nav-link">Projects</button></li>
-            <li><button onClick={() => handleNavigate('/blogs')} className="portfolio-nav-link">Blog</button></li>
-          </ul>
-          <div className="portfolio-navbar-cta">
-            <button onClick={() => handleNavigate('/contact')} className="portfolio-navbar-button">Let's Connect</button>
-          </div>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+        <ul className="mobile-menu-items">
+          <li>
+            <a href="#home" onClick={handleLinkClick}>Home</a>
+          </li>
+          <li>
+            <a href="#about" onClick={handleLinkClick}>About</a>
+          </li>
+          <li>
+            <a href="#projects" onClick={handleLinkClick}>Projects</a>
+          </li>
+          <li>
+            <a href="#contact" onClick={handleLinkClick}>Contact</a>
+          </li>
+        </ul>
+        <div className="mobile-cta">
+          <a href="#contact" className="cta-button" onClick={handleLinkClick}>
+            Let's Talk
+          </a>
+        </div>
+      </div>
+
+      {/* Mobile Menu Backdrop */}
+      {isMenuOpen && (
+        <div className="mobile-backdrop" onClick={() => setIsMenuOpen(false)}></div>
+      )}
     </nav>
   );
-}
+};
 
 export default Navbar;
