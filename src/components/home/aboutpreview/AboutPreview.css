@@ -87,13 +87,17 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
-.about-preview__image-placeholder svg {
+/* .about-preview__image-placeholder svg {
   width: 60%;
   height: 60%;
   opacity: 0.7;
   color: #cbd5e1;
+} */
+.about-preview__image-placeholder img {
+  width: 100%;
+  height: inherit;
+  object-fit: contain;
 }
-
 .about-preview__experience {
   position: absolute;
   bottom: -1.5rem;

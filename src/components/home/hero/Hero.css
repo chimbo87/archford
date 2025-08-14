@@ -340,8 +340,13 @@
   z-index: 2;
   color: #3b82f6;
   opacity: 0.7;
-}
 
+}
+.hero__avatar img{
+  width: 200px;
+  height: inherit;
+  object-fit: contain;
+}
 /* Floating Elements */
 .hero__floating-elements {
   position: absolute;

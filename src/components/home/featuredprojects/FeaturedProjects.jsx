@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FeaturedProjects.css';
+import project from "../../../assets/images/project01.png";
 
 const FeaturedProjects = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -10,7 +11,7 @@ const FeaturedProjects = () => {
       id: 1,
       title: "E-Commerce Platform",
       description: "A modern, responsive e-commerce platform built with React and Node.js. Features include user authentication, product management, shopping cart, payment integration, and admin dashboard.",
-      image: "/api/placeholder/600/400",
+      image: project,
       category: "Full Stack",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
       githubUrl: "https://github.com/yourusername/ecommerce-platform",
@@ -26,7 +27,7 @@ const FeaturedProjects = () => {
       id: 2,
       title: "Task Management App",
       description: "A collaborative task management application with real-time updates. Built with React, Socket.io, and PostgreSQL. Features drag-and-drop functionality, team collaboration, and progress tracking.",
-      image: "/api/placeholder/600/400",
+      image: project,
       category: "Frontend",
       technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL", "Tailwind"],
       githubUrl: "https://github.com/yourusername/task-manager",
@@ -42,7 +43,7 @@ const FeaturedProjects = () => {
       id: 3,
       title: "AI-Powered Analytics Dashboard",
       description: "An intelligent analytics dashboard that uses machine learning to provide insights. Built with Python, React, and integrated with multiple data sources for comprehensive business intelligence.",
-      image: "/api/placeholder/600/400",
+      image: project,
       category: "Full Stack",
       technologies: ["React", "Python", "FastAPI", "TensorFlow", "D3.js"],
       githubUrl: "https://github.com/yourusername/ai-analytics",

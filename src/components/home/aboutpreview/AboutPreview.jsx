@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutPreview.css';
+import mypic from "../../../assets/images/archford.jpg";
 
 const AboutPreview = () => {
   return (
@@ -16,12 +17,13 @@ const AboutPreview = () => {
             <div className="about-preview__visual">
               <div className="about-preview__image-container">
                 <div className="about-preview__image-placeholder">
-                  <svg width="120" height="120" fill="currentColor" viewBox="0 0 24 24">
+                  {/* <svg width="120" height="120" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
+                  </svg> */}
+                       <img src={mypic} alt="banner"/>
                 </div>
                 <div className="about-preview__experience">
-                  <div className="about-preview__experience-number">3+</div>
+                  <div className="about-preview__experience-number">5+</div>
                   <div className="about-preview__experience-text">Years Experience</div>
                 </div>
               </div>
