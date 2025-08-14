@@ -7,6 +7,7 @@
   background: #0f172a;
   overflow: hidden;
   padding: 2rem 0;
+
 }
 
 /* Background Elements */
@@ -69,9 +70,10 @@
 .hero__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0.2 2rem;
   position: relative;
   z-index: 2;
+
 }
 
 .hero__content {
@@ -118,7 +120,7 @@
 }
 
 .hero__name {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1rem;
@@ -140,6 +142,7 @@
 
 .hero__role-text {
   color: #cbd5e1;
+
 }
 
 .hero__role-dynamic {
@@ -164,11 +167,12 @@
 }
 
 .hero__description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: #94a3b8;
   margin-bottom: 3rem;
   max-width: 500px;
+
 }
 
 /* Action Buttons */
@@ -183,7 +187,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   border-radius: 0.75rem;
   font-weight: 600;
   font-size: 1rem;
@@ -234,7 +238,7 @@
 
 .hero__tech-label {
   color: #64748b;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -250,8 +254,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
@@ -446,7 +450,7 @@
   }
   
   .hero__container {
-    padding: 0 1rem;
+    padding: 0.9rem 1rem;
   }
   
   .hero__content {
@@ -491,7 +495,7 @@
 
 @media screen and (max-width: 480px) {
   .hero__container {
-    padding: 0 1rem;
+    padding: 0.8rem 1rem;
   }
   
   .hero__content {
