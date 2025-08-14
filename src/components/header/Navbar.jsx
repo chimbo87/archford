@@ -6,6 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +23,10 @@ const Navbar = () => {
   };
 
   // Close mobile menu when clicking on a link
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
+  const handleLinkClick = (e, path) => {
+    e.preventDefault(); // prevent anchor default navigation
+    setIsMenuOpen(false); // close menu
+    navigate(path); // navigate to the route
   };
 
   return (
@@ -31,10 +34,12 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <a href="#home" onClick={handleLinkClick}>
-            <span className="logo-text" onClick={() => navigate("/")}>
-              DevPortfolio
-            </span>
+          <a
+            href="/"
+            onClick={(e) => handleLinkClick(e, "/")}
+            className="logo-text"
+          >
+            DevPortfolio
           </a>
         </div>
 
@@ -42,33 +47,37 @@ const Navbar = () => {
         <ul className="navbar-menu">
           <li className="navbar-item">
             <a
-              href="#home"
+              href="/"
               className="navbar-link"
-              onClick={() => navigate("/")}
+              onClick={(e) => handleLinkClick(e, "/")}
             >
               Home
             </a>
           </li>
           <li className="navbar-item">
             <a
-              href="#about"
+              href="/about"
               className="navbar-link"
-              onClick={() => navigate("/about")}
+              onClick={(e) => handleLinkClick(e, "/about")}
             >
               About
             </a>
           </li>
           <li className="navbar-item">
             <a
-              href="#projects"
+              href="/projects"
               className="navbar-link"
-              onClick={() => navigate("/projects")}
+              onClick={(e) => handleLinkClick(e, "/projects")}
             >
               Projects
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">
+            <a
+              href="/contact"
+              className="navbar-link"
+              onClick={(e) => handleLinkClick(e, "/contact")}
+            >
               Contact
             </a>
           </li>
@@ -76,7 +85,11 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="navbar-cta">
-          <a href="#contact" className="cta-button">
+          <a
+            href="/contact"
+            className="cta-button"
+            onClick={(e) => handleLinkClick(e, "/contact")}
+          >
             Let's Talk
           </a>
         </div>
@@ -96,40 +109,32 @@ const Navbar = () => {
       <div className={`mobile-menu ${isMenuOpen ? "active" : ""}`}>
         <ul className="mobile-menu-items">
           <li>
-            <a
-              href="#home"
-              onClick={(e) => {
-                handleLinkClick(e); 
-                navigate("/"); 
-              }}
-            >
+            <a href="/" onClick={(e) => handleLinkClick(e, "/")}>
               Home
             </a>
           </li>
           <li>
-            <a href="#about"  onClick={(e) => {
-                handleLinkClick(e); 
-                navigate("/about"); 
-              }}>
+            <a href="/about" onClick={(e) => handleLinkClick(e, "/about")}>
               About
             </a>
           </li>
           <li>
-            <a href="#projects" onClick={(e) => {
-                handleLinkClick(e); 
-                navigate("/projects"); 
-              }}>
+            <a href="/projects" onClick={(e) => handleLinkClick(e, "/projects")}>
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={handleLinkClick}>
+            <a href="/contact" onClick={(e) => handleLinkClick(e, "/contact")}>
               Contact
             </a>
           </li>
         </ul>
         <div className="mobile-cta">
-          <a href="#contact" className="cta-button" onClick={handleLinkClick}>
+          <a
+            href="/contact"
+            className="cta-button"
+            onClick={(e) => handleLinkClick(e, "/contact")}
+          >
             Let's Talk
           </a>
         </div>

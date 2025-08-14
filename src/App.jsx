@@ -9,7 +9,6 @@ import {
   Route,
 } from "react-router-dom";
 import About from "./pages/about/About";
-import Blogs from "./pages/blogs/Blogs";
 import Contact from "./pages/contacts/Contact";
 import Projects from "./pages/projects/Projects";
 ;
@@ -20,7 +19,6 @@ function App() {
       <Route path="/" element={<RootLayOut />}>
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/blogs" element={<Blogs/>}></Route>
         <Route path="/projects" element={<Projects/>}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Route>
@@ -33,5 +31,4 @@ function App() {
     </>
   );
 }
-
 export default App;
