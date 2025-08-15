@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './FeaturedProjects.css';
 import project from "../../../assets/images/project01.png";
-
+import project02 from "../../../assets/images/project02.jpg";
+import project03 from "../../../assets/images/project03.jpg";
 const FeaturedProjects = () => {
   const [activeProject, setActiveProject] = useState(0);
 
@@ -27,7 +28,7 @@ const FeaturedProjects = () => {
       id: 2,
       title: "Task Management App",
       description: "A collaborative task management application with real-time updates. Built with React, Socket.io, and PostgreSQL. Features drag-and-drop functionality, team collaboration, and progress tracking.",
-      image: project,
+      image: project02,
       category: "Frontend",
       technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL", "Tailwind"],
       githubUrl: "https://github.com/yourusername/task-manager",
@@ -43,7 +44,7 @@ const FeaturedProjects = () => {
       id: 3,
       title: "AI-Powered Analytics Dashboard",
       description: "An intelligent analytics dashboard that uses machine learning to provide insights. Built with Python, React, and integrated with multiple data sources for comprehensive business intelligence.",
-      image: project,
+      image: project03,
       category: "Full Stack",
       technologies: ["React", "Python", "FastAPI", "TensorFlow", "D3.js"],
       githubUrl: "https://github.com/yourusername/ai-analytics",
