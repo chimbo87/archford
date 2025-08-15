@@ -3,89 +3,107 @@ import './PersonalStory.css';
 
 const PersonalStory = () => {
   return (
-    <section className="ps-container">
-      <div className="ps-content">
-        <div className="ps-header">
-          <h2 className="ps-title">My Journey into Development</h2>
-          <div className="ps-divider"></div>
-          <p className="ps-subtitle">From curiosity to career - the story behind the code</p>
+    <section className="personal-story">
+      <div className="personal-story__container">
+        {/* Header */}
+        <div className="personal-story__header">
+          <div className="personal-story__badge">My Journey</div>
+          <h2 className="personal-story__title">
+            From Curiosity to 
+            <span className="personal-story__title-accent"> Code</span>
+          </h2>
+          <p className="personal-story__subtitle">
+            Every great developer has a story. Here's mine.
+          </p>
         </div>
 
-        <div className="ps-timeline">
-          <div className="ps-timeline-item">
-            <div className="ps-timeline-card">
-              <div className="ps-timeline-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                </svg>
+        {/* Story Content */}
+        <div className="personal-story__content">
+          <div className="personal-story__visual">
+            <div className="personal-story__avatar">
+              <div className="personal-story__avatar-placeholder">
+                <span>👨‍💻</span>
               </div>
-              <h3 className="ps-timeline-year">2015</h3>
-              <h4 className="ps-timeline-title">The Beginning</h4>
-              <p className="ps-timeline-desc">
-                My first encounter with code - simple HTML and CSS to customize my blog. Instantly fascinated by how lines of text could create visual experiences.
-              </p>
+              <div className="personal-story__avatar-glow"></div>
+            </div>
+            <div className="personal-story__code-snippet">
+              <div className="personal-story__code-header">
+                <div className="personal-story__code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span className="personal-story__code-title">my_journey.js</span>
+              </div>
+              <div className="personal-story__code-body">
+                <div className="personal-story__code-line">
+                  <span className="personal-story__code-keyword">const</span>
+                  <span className="personal-story__code-variable"> myJourney</span>
+                  <span className="personal-story__code-operator"> = </span>
+                  <span className="personal-story__code-string">"amazing"</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="ps-timeline-item">
-            <div className="ps-timeline-card">
-              <div className="ps-timeline-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
-                </svg>
+          <div className="personal-story__text">
+            <div className="personal-story__timeline">
+              <div className="personal-story__timeline-item">
+                <div className="personal-story__timeline-dot"></div>
+                <div className="personal-story__timeline-content">
+                  <h3 className="personal-story__timeline-title">The Spark</h3>
+                  <p className="personal-story__timeline-text">
+                    It all started with a simple "Hello, World!" program. What began as curiosity 
+                    quickly transformed into a passion for creating digital solutions that make a difference.
+                  </p>
+                </div>
               </div>
-              <h3 className="ps-timeline-year">2017</h3>
-              <h4 className="ps-timeline-title">Diving Deeper</h4>
-              <p className="ps-timeline-desc">
-                Started learning JavaScript seriously. Built my first interactive projects - simple games and web apps that made me fall in love with programming logic.
-              </p>
-            </div>
-          </div>
 
-          <div className="ps-timeline-item">
-            <div className="ps-timeline-card">
-              <div className="ps-timeline-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-                </svg>
+              <div className="personal-story__timeline-item">
+                <div className="personal-story__timeline-dot"></div>
+                <div className="personal-story__timeline-content">
+                  <h3 className="personal-story__timeline-title">The Learning Path</h3>
+                  <p className="personal-story__timeline-text">
+                    From late nights debugging code to building my first full-stack application, 
+                    every challenge became a stepping stone to becoming a better developer.
+                  </p>
+                </div>
               </div>
-              <h3 className="ps-timeline-year">2019</h3>
-              <h4 className="ps-timeline-title">Formal Education</h4>
-              <p className="ps-timeline-desc">
-                Enrolled in computer science courses. Learned data structures, algorithms, and the fundamentals that transformed me from a hobbyist to a professional.
-              </p>
-            </div>
-          </div>
 
-          <div className="ps-timeline-item">
-            <div className="ps-timeline-card">
-              <div className="ps-timeline-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                </svg>
+              <div className="personal-story__timeline-item">
+                <div className="personal-story__timeline-dot"></div>
+                <div className="personal-story__timeline-content">
+                  <h3 className="personal-story__timeline-title">The Mission</h3>
+                  <p className="personal-story__timeline-text">
+                    Today, I'm dedicated to crafting clean, efficient code and building applications 
+                    that solve real problems while continuously learning and growing in this ever-evolving field.
+                  </p>
+                </div>
               </div>
-              <h3 className="ps-timeline-year">2021</h3>
-              <h4 className="ps-timeline-title">First Professional Role</h4>
-              <p className="ps-timeline-desc">
-                Landed my first developer job. The real learning began - collaborating with teams, understanding production code, and solving real-world problems.
-              </p>
             </div>
-          </div>
 
-          <div className="ps-timeline-item">
-            <div className="ps-timeline-card">
-              <div className="ps-timeline-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
-                </svg>
+            <div className="personal-story__highlights">
+              <div className="personal-story__highlight">
+                <span className="personal-story__highlight-number">2+</span>
+                <span className="personal-story__highlight-label">Years Coding</span>
               </div>
-              <h3 className="ps-timeline-year">Present</h3>
-              <h4 className="ps-timeline-title">Continuous Growth</h4>
-              <p className="ps-timeline-desc">
-                Expanding my skills daily. Currently passionate about React, modern web architectures, and creating intuitive user experiences that make an impact.
-              </p>
+              <div className="personal-story__highlight">
+                <span className="personal-story__highlight-number">15+</span>
+                <span className="personal-story__highlight-label">Projects Built</span>
+              </div>
+              <div className="personal-story__highlight">
+                <span className="personal-story__highlight-number">∞</span>
+                <span className="personal-story__highlight-label">Learning</span>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Background Elements */}
+        <div className="personal-story__bg-elements">
+          <div className="personal-story__bg-circle personal-story__bg-circle--1"></div>
+          <div className="personal-story__bg-circle personal-story__bg-circle--2"></div>
+          <div className="personal-story__bg-grid"></div>
         </div>
       </div>
     </section>
